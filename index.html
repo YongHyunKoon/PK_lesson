@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Video Streaming Demonstration</title>
+  </head>
+  <body>
+    <h1>My project</h1>
+    {% if video_on == true %}
+    <img src="{{ url_for('video_feed') }}">
+    {% else %}
+    <img src="blank.jpg", width=320,height="240">
+    {% endif %}
+    <br>
+    <button id="Video on" class="button" onclick="window.location.href='/video/on'">Video ON</button>
+     <button id="Video off" class="button" onclick="window.location.href='/video/off'">Video OFF </button>
+    <h2>LED CONTROL</h2>
+    <button id="LED ON" class="button" onclick="window.location.href='/led/on'">LED ON</button>
+    <button id="LED OFF" class="button" onclick="window.location.href='/led/off'">LED OFF</button>
+  </body>
+</html>
